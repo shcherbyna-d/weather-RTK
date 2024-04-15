@@ -11,7 +11,7 @@ const Header = styled.header`
 `;
 
 const Main = styled.main`
-  background-color: #f5f5f5;
+  background-color: floralwhite;
   height: calc(100vh - 60px);
 `;
 
@@ -39,7 +39,7 @@ const WeatherWidget = () => {
         {weatherData && !error && (
           <WeatherCard
             icon={weatherData.weather[0].icon}
-            temperature={weatherData.main.temp}
+            temperature={Math.round(weatherData.main.temp)}
             wind={weatherData.wind.speed}
             windDirection={weatherData.wind.deg}
             pressure={weatherData.main.pressure}
