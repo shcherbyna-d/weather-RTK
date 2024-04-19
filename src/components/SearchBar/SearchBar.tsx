@@ -27,7 +27,12 @@ const SearchBar = () => {
 
   return (
     <StyledForm className="form" onSubmit={(e) => e.preventDefault()}>
-      <TextInput value={value} onChange={(e) => setValue(e.target.value)} />
+      <TextInput
+        type="text"
+        name="city"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
       <Button onClick={handleSearch} type="submit" disabled={!value}>
         Пошук
       </Button>
